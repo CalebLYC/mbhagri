@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mbhagri/components/commands.dart';
 import 'package:mbhagri/components/searchbar.dart';
+import 'package:mbhagri/utils/data.dart';
 
 class CommandsPage extends StatefulWidget {
   const CommandsPage({super.key});
@@ -20,7 +21,7 @@ class _CommandsPageState extends State<CommandsPage> {
         child: Column(
           children: [
             const SearchBar(),
-            const Commands(),
+            Commands(produits: produits),
           ],
         ),
       ),

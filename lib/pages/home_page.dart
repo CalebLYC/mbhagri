@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mbhagri/components/commands.dart';
 import 'package:mbhagri/components/products_type_caroussel.dart';
 import 'package:mbhagri/utils/colors.dart';
+import 'package:mbhagri/utils/data.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Commands(),
+            Commands(produits: produits),
           ],
         ),
       ),

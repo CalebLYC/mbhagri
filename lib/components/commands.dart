@@ -1,38 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:mbhagri/components/product_tile.dart';
+import 'package:mbhagri/models/Produit.dart';
 
 class Commands extends StatefulWidget {
-  const Commands({super.key});
+  const Commands({super.key, required this.produits});
+  final List<Produit> produits;
 
   @override
-  State<Commands> createState() => _CommandsState();
+  State<Commands> createState() => _CommandsState(produits);
 }
 
 class _CommandsState extends State<Commands> {
+  _CommandsState(this.produits);
+  final List<Produit> produits;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.5,
-      child: ListView(
-        children: [
-          ListTile(
-            leading: Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(50)),
-              ),
-              child: Image.asset(
-                "assets/images/types/tubercules.jpg",
-                width: 70,
-                height: 70,
-              ),
-            ),
-            title: Text("Kara"),
-            subtitle: Text("10 tonnes de maïs"),
-            trailing: const Icon(Icons.location_on),
-          ),
-        ],
+      child: ListView.builder(
+        itemCount: produits.length,
+        itemBuilder: (context, index) => ProductTile(product: produits[index]),
       ),
     );
   }

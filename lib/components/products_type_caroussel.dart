@@ -4,7 +4,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:mbhagri/components/caroussel_item.dart';
 import 'package:mbhagri/utils/colors.dart';
+import 'package:mbhagri/utils/data.dart';
 
 class ProductTypesCaroussel extends StatefulWidget {
   const ProductTypesCaroussel({super.key});
@@ -44,36 +46,10 @@ class _ProductTypesCarousselState extends State<ProductTypesCaroussel> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20),
-      child: CarouselSlider(
-        items: [
-          Column(
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width / 2,
-                height: MediaQuery.of(context).size.height * 0.3,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/types/cereales.webp"),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Text(
-                    "Céréales",
-                    style: TextStyle(
-                      color: Black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                //child: Image.asset("assets/images/types/cereales.webp"),
-              ),
-            ],
-          ),
-        ],
+      child: CarouselSlider.builder(
+        itemCount: types.length,
+        itemBuilder: (context, index, realIndex) =>
+            CarousselItem(type: types[index]),
         options: CarouselOptions(
           height: MediaQuery.of(context).size.height * 0.3,
           enableInfiniteScroll: true,
