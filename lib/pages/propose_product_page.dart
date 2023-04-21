@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:mbhagri/components/field.dart';
+import 'package:mbhagri/utils/colors.dart';
 
 class ProposeProductPage extends StatefulWidget {
   const ProposeProductPage({super.key});
@@ -32,6 +33,25 @@ class _ProposeProductPageState extends State<ProposeProductPage> {
             Field(controller: priceController, text: "Prix du produit"),
             Field(controller: quantityController, text: "Quantité du produit"),
             Field(controller: locationController, text: "Localité"),
+            Container(
+              margin: const EdgeInsets.all(15),
+              height: 60,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                color: Primary,
+              ),
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Ajouter",
+                  style: TextStyle(
+                    color: Black,
+                    fontSize: 30,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
