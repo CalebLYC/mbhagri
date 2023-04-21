@@ -38,7 +38,7 @@ class _ProposeProductPageState extends State<ProposeProductPage> {
               height: 60,
               width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
+                borderRadius: const BorderRadius.all(Radius.circular(15)),
                 color: Primary,
               ),
               child: TextButton(
