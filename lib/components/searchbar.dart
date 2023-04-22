@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:mbhagri/pages/filter_page.dart';
 import 'package:mbhagri/pages/search_page.dart';
 import 'package:mbhagri/utils/colors.dart';
 
@@ -15,15 +14,34 @@ class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(1),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.075,
+        width: MediaQuery.of(context).size.width * 0.6,
+        padding: const EdgeInsets.all(5),
+        height: 35,
         decoration: BoxDecoration(
-          border: Border.all(),
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-        ),
+            border: Border.all(),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+            color: Colors.white),
         child: TextField(
-          decoration: null,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: "Rechercher...",
+            suffixIcon: IconButton(
+              onPressed: () => Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (_, __, ____) => const FilterPage(),
+                ),
+              ),
+              icon: Wrap(
+                children: const [
+                  Icon(Icons.filter),
+                  Text("Filtrer"),
+                ],
+              ),
+            ),
+          ),
           cursorColor: Black,
           //textAlign: TextAlign.center,
           style: TextStyle(color: Black),

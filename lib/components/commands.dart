@@ -16,7 +16,7 @@ class _CommandsState extends State<Commands> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.5,
+      height: MediaQuery.of(context).size.height * 0.8,
       child: ListView.builder(
         itemCount: produits.length,
         itemBuilder: (context, index) => ProductTile(product: produits[index]),

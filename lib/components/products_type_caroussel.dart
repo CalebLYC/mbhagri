@@ -1,11 +1,6 @@
-import 'dart:async';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:mbhagri/components/caroussel_item.dart';
-import 'package:mbhagri/utils/colors.dart';
 import 'package:mbhagri/utils/data.dart';
 
 class ProductTypesCaroussel extends StatefulWidget {
@@ -45,13 +40,13 @@ class _ProductTypesCarousselState extends State<ProductTypesCaroussel> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(5),
       child: CarouselSlider.builder(
         itemCount: types.length,
         itemBuilder: (context, index, realIndex) =>
             CarousselItem(type: types[index]),
         options: CarouselOptions(
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: MediaQuery.of(context).size.height * 0.23,
           enableInfiniteScroll: true,
           viewportFraction: 0.7,
           autoPlay: true,

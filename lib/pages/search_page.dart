@@ -15,8 +15,28 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rechercher'),
-      ),
+          title: Padding(
+        padding: const EdgeInsets.all(1),
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.8,
+          padding: const EdgeInsets.all(5),
+          height: 50,
+          decoration: BoxDecoration(
+              border: Border.all(),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              color: Colors.white),
+          child: TextField(
+            decoration: const InputDecoration(
+              border: InputBorder.none,
+              icon: Icon(Icons.search),
+            ),
+            cursorColor: Black,
+            //textAlign: TextAlign.center,
+            style: TextStyle(color: Black),
+            onChanged: (value) {},
+          ),
+        ),
+      )),
       body: Container(
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
@@ -24,20 +44,7 @@ class _SearchPageState extends State<SearchPage> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.075,
-                  decoration: BoxDecoration(
-                    border: Border.all(),
-                    borderRadius: const BorderRadius.all(Radius.circular(10)),
-                  ),
-                  child: TextField(
-                    controller: _controller,
-                    decoration: null,
-                    cursorColor: Black,
-                    //textAlign: TextAlign.center,
-                    style: TextStyle(color: Black),
-                  ),
-                ),
+                child: Container(),
               )
             ],
           ),

@@ -12,16 +12,16 @@ class CarousselItem extends StatelessWidget {
       children: [
         Container(
           width: MediaQuery.of(context).size.width / 2,
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: MediaQuery.of(context).size.height * 0.23,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(type.image),
               fit: BoxFit.cover,
             ),
-            borderRadius: const BorderRadius.all(Radius.circular(15)),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(5),
             child: Text(
               type.libele,
               style: TextStyle(

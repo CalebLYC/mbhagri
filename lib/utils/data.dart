@@ -1,5 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:mbhagri/models/ProductType.dart';
 import 'package:mbhagri/models/Produit.dart';
+import 'package:mbhagri/models/User.dart';
+
+final user =
+    User(name: "SPEC OIC", email: "specoic@gmail.com", role: "Producteur");
 
 List<Produit> produits = [
   Produit(
@@ -99,4 +104,35 @@ List<ProductType> types = [
     libele: "Tubercules",
     description: "description",
   ),
+];
+
+final List<Map<String, dynamic>> headItems = [
+  {
+    "libele": " Offres",
+    "icon": Icons.drive_eta,
+  },
+  {
+    "libele": " Produits agricoles",
+    "icon": Icons.drive_eta,
+  },
+  {
+    "libele": "Producteurs/Agriculteurs",
+    "icon": Icons.drive_eta,
+  },
+  {
+    "libele": "Commerçants",
+    "icon": Icons.drive_eta,
+  },
+  {
+    "libele": "Transporteurs",
+    "icon": Icons.drive_eta,
+  },
+  {
+    "libele": "Achat",
+    "icon": Icons.drive_eta,
+  },
+  {
+    "libele": "Entreprise",
+    "icon": Icons.drive_eta,
+  },
 ];

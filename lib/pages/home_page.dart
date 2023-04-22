@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mbhagri/components/commands.dart';
+import 'package:mbhagri/components/head_caroussel.dart';
 import 'package:mbhagri/components/products_type_caroussel.dart';
 import 'package:mbhagri/utils/colors.dart';
 import 'package:mbhagri/utils/data.dart';
@@ -20,9 +21,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ProductTypesCaroussel(),
+            const HeadCaroussel(),
+            const ProductTypesCaroussel(),
             Padding(
-              padding: const EdgeInsets.all(5),
+              padding: const EdgeInsets.all(4),
               child: Text(
                 "Dernières commandes",
                 style: TextStyle(

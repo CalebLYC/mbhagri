@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mbhagri/components/searchbar.dart';
 import 'package:mbhagri/pages/commands_page.dart';
 import 'package:mbhagri/pages/home_page.dart';
+import 'package:mbhagri/pages/map_page.dart';
+import 'package:mbhagri/pages/notifications_page.dart';
 import 'package:mbhagri/pages/profile_page.dart';
 import 'package:mbhagri/pages/propose_product_page.dart';
 import 'package:mbhagri/utils/colors.dart';
+import 'package:mbhagri/utils/data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,12 +48,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("MbhAgri"),
+        title: const Text(
+          "MbhAgri",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: const [
+          SearchBar(),
+        ],
       ),
       body: [
         const HomePage(),
-        const CommandsPage(),
-        const ProposeProductPage(),
+        buildSecondPage(user),
+        const MapPage(),
+        const NotificationsPage(),
         const ProfilePage(),
       ][_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -67,12 +82,16 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Acceuil',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.collections),
-            label: 'Commandes',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.add),
             label: 'Faire une offre',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.location_on),
+            label: 'carte',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
@@ -81,5 +100,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
+  }
+}
+
+Widget buildSecondPage(user) {
+  switch (user.role.toString().trim().toLowerCase()) {
+    case "producteur":
+      return const ProposeProductPage();
+    default:
+      return const ProposeProductPage();
   }
 }
