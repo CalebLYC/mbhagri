@@ -27,6 +27,7 @@ class _SearchBarState extends State<SearchBar> {
           decoration: InputDecoration(
             border: InputBorder.none,
             hintText: "Rechercher...",
+            hintStyle: const TextStyle(fontFamily: 'Poppins', fontSize: 16),
             suffixIcon: IconButton(
               onPressed: () => Navigator.push(
                 context,
@@ -37,7 +38,10 @@ class _SearchBarState extends State<SearchBar> {
               icon: Wrap(
                 children: const [
                   Icon(Icons.filter),
-                  Text("Filtrer"),
+                  Text(
+                    "Filtrer",
+                    style: TextStyle(fontFamily: 'Poppins'),
+                  ),
                 ],
               ),
             ),

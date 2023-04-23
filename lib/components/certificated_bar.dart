@@ -34,6 +34,7 @@ class CertificatedBar extends StatelessWidget {
             child: Text(
               "Compte certifié",
               style: TextStyle(
+                fontFamily: 'Montserrat',
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               ),

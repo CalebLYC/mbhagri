@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mbhagri/components/searchbar.dart';
-import 'package:mbhagri/pages/commands_page.dart';
 import 'package:mbhagri/pages/home_page.dart';
 import 'package:mbhagri/pages/map_page.dart';
 import 'package:mbhagri/pages/notifications_page.dart';
@@ -76,6 +75,15 @@ class _MyHomePageState extends State<MyHomePage> {
         unselectedItemColor: Colors.white,
         elevation: 2,
         backgroundColor: Primary,
+        unselectedLabelStyle: const TextStyle(
+          fontFamily: 'Poppins',
+          fontSize: 18.0,
+        ),
+        selectedLabelStyle: const TextStyle(
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.bold,
+          fontSize: 18.0,
+        ),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

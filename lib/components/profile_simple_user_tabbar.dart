@@ -37,6 +37,10 @@ class _ProfileSimpleUserTabBarState extends State<ProfileSimpleUserTabBar>
             labelColor: Primary,
             unselectedLabelColor: Colors.black,
             indicatorColor: Black,
+            labelStyle: const TextStyle(
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.bold,
+            ),
             tabs: const [
               Tab(text: "Offres"),
               Tab(text: "Transports en cours"),

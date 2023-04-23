@@ -25,6 +25,7 @@ class InfosCard extends StatelessWidget {
                     product.prix.toString(),
                     style: TextStyle(
                       color: Primary,
+                      fontFamily: 'Poppins',
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -57,6 +58,7 @@ class InfosCard extends StatelessWidget {
                       Text(
                         "27 avril 2023",
                         style: TextStyle(
+                          fontFamily: 'Lato',
                           fontStyle: FontStyle.italic,
                         ),
                       ),
@@ -76,6 +78,7 @@ class InfosCard extends StatelessWidget {
                       Text(
                         "Kara",
                         style: TextStyle(
+                          fontFamily: 'Lato',
                           fontStyle: FontStyle.italic,
                         ),
                       ),
@@ -88,8 +91,11 @@ class InfosCard extends StatelessWidget {
               margin: const EdgeInsets.all(10),
               child: Text(
                 product.description,
-                style:
-                    const TextStyle(fontSize: 15, fontStyle: FontStyle.italic),
+                style: const TextStyle(
+                  fontFamily: 'Lato',
+                  fontSize: 15,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
             ),
           ],

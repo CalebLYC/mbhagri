@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:mbhagri/utils/colors.dart';
 
@@ -36,6 +38,10 @@ class _ProfileAdminTabBarState extends State<ProfileAdminTabBar>
             labelColor: Primary,
             unselectedLabelColor: Colors.black,
             indicatorColor: Black,
+            labelStyle: const TextStyle(
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.bold,
+            ),
             tabs: const [
               Tab(text: "Offres"),
               Tab(text: "Commandes"),

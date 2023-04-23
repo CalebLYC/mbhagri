@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:mbhagri/models/Produit.dart';
 import 'package:mbhagri/pages/product_page.dart';
@@ -36,8 +38,18 @@ class _ProductTileState extends State<ProductTile> {
             height: 70,
           ),
         ),
-        title: const Text("Kara"),
-        subtitle: const Text("10 tonnes de maïs"),
+        title: const Text(
+          "Kara",
+          style: TextStyle(
+            fontFamily: 'Poppins',
+          ),
+        ),
+        subtitle: Text(
+          product.quantity,
+          style: const TextStyle(
+            fontFamily: 'Lato',
+          ),
+        ),
         trailing: IconButton(
           icon: const Icon(Icons.more_vert),
           onPressed: () {},

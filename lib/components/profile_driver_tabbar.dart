@@ -36,6 +36,10 @@ class _ProfileDriverTabBarState extends State<ProfileDriverTabBar>
             labelColor: Primary,
             unselectedLabelColor: Colors.black,
             indicatorColor: Black,
+            labelStyle: const TextStyle(
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.bold,
+            ),
             tabs: const [
               Tab(text: "Actuel transport"),
               Tab(text: "Transports déjà effectués"),

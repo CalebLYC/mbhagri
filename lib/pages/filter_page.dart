@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class FilterPage extends StatefulWidget {
   const FilterPage({super.key});
@@ -17,6 +15,7 @@ class _FilterPageState extends State<FilterPage> {
         title: const Text(
           "Filtrer",
           style: TextStyle(
+            fontFamily: 'Poppins',
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,

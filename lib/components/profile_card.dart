@@ -40,6 +40,7 @@ class ProfileCard extends StatelessWidget {
                       child: Text(
                         user.name,
                         style: const TextStyle(
+                          fontFamily: 'Montserrat',
                           fontSize: 10,
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold,
@@ -51,6 +52,7 @@ class ProfileCard extends StatelessWidget {
                       child: Text(
                         "${user.role} certifié",
                         style: const TextStyle(
+                          fontFamily: 'Lato',
                           fontSize: 10,
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold,
@@ -66,6 +68,7 @@ class ProfileCard extends StatelessWidget {
                       Text(
                         "SPEC OIC".toUpperCase(),
                         style: const TextStyle(
+                          fontFamily: 'Poppins',
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -84,6 +87,7 @@ class ProfileCard extends StatelessWidget {
                             Text(
                               "Togo Kara",
                               style: TextStyle(
+                                fontFamily: 'Lato',
                                 fontStyle: FontStyle.italic,
                                 fontSize: 15,
                               ),
@@ -94,12 +98,14 @@ class ProfileCard extends StatelessWidget {
                       const Text(
                         "55 offres",
                         style: TextStyle(
+                          fontFamily: 'Lato',
                           fontSize: 15,
                         ),
                       ),
                       const Text(
                         "Membre depuis\n   le 15 avril 2023",
                         style: TextStyle(
+                          fontFamily: 'Lato',
                           fontSize: 15,
                         ),
                       ),

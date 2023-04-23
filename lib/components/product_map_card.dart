@@ -26,7 +26,11 @@ class ProductMapCard extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     "Kara",
-                    style: TextStyle(fontStyle: FontStyle.italic, fontSize: 25),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontStyle: FontStyle.italic,
+                      fontSize: 25,
+                    ),
                   ),
                 ],
               ),

@@ -26,6 +26,7 @@ class CarousselItem extends StatelessWidget {
               type.libele,
               style: TextStyle(
                 color: Black,
+                fontFamily: 'Poppins',
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),

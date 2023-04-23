@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
               child: Text(
                 "Dernières commandes",
                 style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: Black,
                   fontSize: 15,
                   fontWeight: FontWeight.bold,

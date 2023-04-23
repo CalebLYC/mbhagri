@@ -45,6 +45,7 @@ class _ProposeProductPageState extends State<ProposeProductPage> {
                   "Ajouter",
                   style: TextStyle(
                     color: Black,
+                    fontFamily: 'Montserrat',
                     fontSize: 30,
                   ),
                 ),

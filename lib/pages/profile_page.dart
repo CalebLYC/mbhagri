@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:mbhagri/components/certificated_bar.dart';
 import 'package:mbhagri/components/profile_admin_tabbar.dart';
 import 'package:mbhagri/components/profile_card.dart';

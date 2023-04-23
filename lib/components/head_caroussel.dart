@@ -43,6 +43,7 @@ class _HeadCarousselState extends State<HeadCaroussel> {
                       child: Text(
                         item['libele'].toString(),
                         style: TextStyle(
+                          fontFamily: 'Montserrat',
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           fontStyle: FontStyle.italic,

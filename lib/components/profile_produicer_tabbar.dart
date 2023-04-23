@@ -36,6 +36,10 @@ class _ProfileProduicerTabBarState extends State<ProfileProduicerTabBar>
             labelColor: Primary,
             unselectedLabelColor: Colors.black,
             indicatorColor: Black,
+            labelStyle: const TextStyle(
+              fontFamily: 'Lato',
+              fontWeight: FontWeight.bold,
+            ),
             tabs: const [
               Tab(text: "Mes offres"),
               Tab(text: "produits en cours de transport"),

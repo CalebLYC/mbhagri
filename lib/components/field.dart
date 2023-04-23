@@ -31,7 +31,7 @@ class Field extends StatelessWidget {
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
             hintText: text,
-            hintStyle: const TextStyle(fontSize: 16),
+            hintStyle: const TextStyle(fontFamily: 'Poppins', fontSize: 16),
           ),
           style: TextStyle(color: Black),
           cursorColor: Black,
