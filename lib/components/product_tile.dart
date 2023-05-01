@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:mbhagri/models/Produit.dart';
 import 'package:mbhagri/pages/product_page.dart';
@@ -27,34 +25,50 @@ class _ProductTileState extends State<ProductTile> {
         ),
       ),
       child: Card(
-          child: ListTile(
-        leading: Container(
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(50)),
+        child: ListTile(
+          leading: Container(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(50)),
+            ),
+            child: Image.asset(
+              product.image,
+              width: 70,
+              height: 70,
+            ),
           ),
-          child: Image.asset(
-            product.image,
-            width: 70,
-            height: 70,
+          title: const Text(
+            "Kara",
+            style: TextStyle(
+              fontFamily: 'Poppins',
+            ),
+          ),
+          subtitle: Text(
+            product.quantity,
+            style: const TextStyle(
+              fontFamily: 'Lato',
+            ),
+          ),
+          trailing: PopupMenuButton<String>(
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              const PopupMenuItem<String>(
+                value: 'transport',
+                child: Text('Demande de transport'),
+              ),
+              const PopupMenuItem<String>(
+                value: 'favoris',
+                child: Text('Ajouter aux favoris'),
+              ),
+            ],
+            onSelected: (String value) {
+              if (value == 'transport') {
+                // Logique pour faire une demande de transport
+              } else if (value == 'favoris') {
+                // Logique pour ajouter aux favoris
+              }
+            },
           ),
         ),
-        title: const Text(
-          "Kara",
-          style: TextStyle(
-            fontFamily: 'Poppins',
-          ),
-        ),
-        subtitle: Text(
-          product.quantity,
-          style: const TextStyle(
-            fontFamily: 'Lato',
-          ),
-        ),
-        trailing: IconButton(
-          icon: const Icon(Icons.more_vert),
-          onPressed: () {},
-        ),
-      )),
+      ),
     );
   }
 }

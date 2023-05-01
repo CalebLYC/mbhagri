@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:mbhagri/pages/search_page.dart';
 import 'package:mbhagri/utils/colors.dart';
 import 'package:mbhagri/utils/data.dart';
 
@@ -23,35 +24,43 @@ class _HeadCarousselState extends State<HeadCaroussel> {
           itemCount: headItems.length,
           itemBuilder: (context, index, realIndex) {
             final item = headItems[index];
-            return Card(
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.5,
-                height: MediaQuery.of(context).size.height * 0.15,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(2),
-                      child: Icon(
-                        item['icon'],
-                        size: 40,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 2),
-                      child: Text(
-                        item['libele'].toString(),
-                        style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                          color: Primary,
+            return GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (_, __, ___) => const SearchPage(),
+                ),
+              ),
+              child: Card(
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Icon(
+                          item['icon'],
+                          size: 40,
                         ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 2),
+                        child: Text(
+                          item['libele'].toString(),
+                          style: const TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
+                            color: Primary,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mbhagri/components/product_map.dart';
 import 'package:mbhagri/models/Produit.dart';
 
 class ProductMapCard extends StatelessWidget {
@@ -9,7 +10,7 @@ class ProductMapCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.3,
+      height: MediaQuery.of(context).size.height * 0.45,
       margin: const EdgeInsets.all(5),
       child: Card(
         child: Column(
@@ -35,6 +36,7 @@ class ProductMapCard extends StatelessWidget {
                 ],
               ),
             ),
+            ProductMap(product: product),
           ],
         ),
       ),
